@@ -1,0 +1,29 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+
+@*@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}*@
+
+    <!--==============================
+      Error Aera
+    ==============================-->
+    <section class="vs-error-wrapper vs-error-layout1 py-lg-150 py-60">
+        <div class="container">
+            <div class="error-content text-center">
+                <div class="error-img mb-lg-60 mb-30">
+                    <img src="assets/img/error/eror-icon-1-1.png" alt="Error Image">
+                </div>
+                <h2 class="sec-title1 mb-15">Page Not Found</h2>
+                <p class="error-subtitle mb-lg-35">We're sorry, but we can't find the page you were looking for.</p>
+                <a href="/" class="vs-btn mask-style1">Go Home</a>
+            </div>
+        </div>
+    </section>
