@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Grillino - Food Restaurant Cafe Grill & Bistro";
 }
-
 <!--==============================
         hero Area
     ==============================-->
@@ -60,70 +59,10 @@
             </div>
         </div>
         <div class="row vs-carousel arrow-has-margin" data-arrows="true" data-slidetoshow="3" data-mdslidetoshow="2" data-smslidetoshow="1" data-xsslidetoshow="1">
-            <div class="col-xl-4">
-                <div class="vs-service vs-box1 ">
-                    <div class="service-img image-scale-hover">
-                        <a href="/About"><img src="assets/img/service/service-img-1-1.jpg" class="w-100" alt="Service Image"></a>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title mb-10"><a href="/About">Party Services</a></h3>
-                        <p class="service-text">
-                            Continually utilize team building niche markets before visionary catalysts for
-                            change.
-                        </p>
-                        <a href="/About" class="icon-btn vs-box-icon text-title"><i class="far fa-angle-right"></i></a>
-                        <a href="/About" class="vs-btn learn-more mask-style1"><i class="far fa-angle-right"></i>Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="vs-service vs-box1 ">
-                    <div class="service-img image-scale-hover">
-                        <a href="/About"><img src="assets/img/service/service-img-1-2.jpg" class="w-100" alt="Service Image"></a>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title mb-10"><a href="/About">Wedding Services</a></h3>
-                        <p class="service-text">
-                            Continually utilize team building niche markets before visionary catalysts for
-                            change.
-                        </p>
-                        <a href="/About" class="icon-btn vs-box-icon text-title"><i class="far fa-angle-right"></i></a>
-                        <a href="/About" class="vs-btn learn-more mask-style1"><i class="far fa-angle-right"></i>Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="vs-service vs-box1 ">
-                    <div class="service-img image-scale-hover">
-                        <a href="/About"><img src="assets/img/service/service-img-1-3.jpg" class="w-100" alt="Service Image"></a>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title mb-10"><a href="/About">Buffet Services</a></h3>
-                        <p class="service-text">
-                            Continually utilize team building niche markets before visionary catalysts for
-                            change.
-                        </p>
-                        <a href="/About" class="icon-btn vs-box-icon text-title"><i class="far fa-angle-right"></i></a>
-                        <a href="/About" class="vs-btn learn-more mask-style1"><i class="far fa-angle-right"></i>Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="vs-service vs-box1 ">
-                    <div class="service-img image-scale-hover">
-                        <a href="/About"><img src="assets/img/service/service-img-1-4.jpg" class="w-100" alt="Service Image"></a>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title mb-10"><a href="/About">Home Delivery</a></h3>
-                        <p class="service-text">
-                            Continually utilize team building niche markets before visionary catalysts for
-                            change.
-                        </p>
-                        <a href="/About" class="icon-btn vs-box-icon text-title"><i class="far fa-angle-right"></i></a>
-                        <a href="/About" class="vs-btn learn-more mask-style1"><i class="far fa-angle-right"></i>Learn More</a>
-                    </div>
-                </div>
-            </div>
+            @foreach(var service in Model.context.Services)
+            {
+                @await Html.PartialAsync("Partials/_ServiceListItem", service);                
+            }
         </div>
     </div>
 </section>
@@ -290,126 +229,10 @@
         <div class="tab-content" id="foodTabContent">
             <div class="tab-pane fade  show active" id="party" aria-labelledby="party-tab">
                 <div class="row">
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$89.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-1.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Boiled Organic Egg</a></h3>
-                                    <p class="food-text mb-0 text-xs">Sauce, Hot Burger, Soft Drink</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$125.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-2.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Philadelphia salmon</a></h3>
-                                    <p class="food-text mb-0 text-xs">Chilli bites, Chomchom, Soft Drink</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$79.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-3.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Western Sunrise</a></h3>
-                                    <p class="food-text mb-0 text-xs">Chingri Malai curry, Soft Drink</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$499.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-4.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Antioxidant Fruits Mix</a></h3>
-                                    <p class="food-text mb-0 text-xs">Dimer chop, Lau Chingri, Ruti</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$230.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-5.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Stuffed Strawberry</a></h3>
-                                    <p class="food-text mb-0 text-xs">Chomchom sweets, Malai curry</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$120.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-6.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Grilled Smoked Chicken</a></h3>
-                                    <p class="food-text mb-0 text-xs">Morog Polao, Biryani, Soft Drink</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$79.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-7.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Chipotle Chicken Bowl</a></h3>
-                                    <p class="food-text mb-0 text-xs">Red Rice, Tehari, Drinks</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 vs-food-box">
-                        <div class="media pt-40 align-items-stretch d-block d-lg-flex">
-                            <div class="media-thumb">
-                                <strong class="food-price text-theme bg-white text-md">$699.00</strong>
-                                <a href="/FoodDetails"><img src="assets/img/food-menu/food-menu-img-1-8.jpg" alt="Food Menu Image"></a>
-                            </div>
-                            <div class="media-body px-lg-35 d-flex align-items-center">
-                                <div class="food-content w-100">
-                                    <h3 class="food-title text-lg mb-0"><a href="/FoodDetails">Party Platter Wings</a></h3>
-                                    <p class="food-text mb-0 text-xs">Chilli bites, Roust, Soft Drink</p>
-                                    <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @foreach(var food in Model.context.Foods)
+                    {
+                        @await Html.PartialAsync("Partials/_FoodMenuItem", food);
+                    }
                 </div>
             </div>
             <div class="tab-pane fade " id="breakfast-food" aria-labelledby="breakfast-food-tab">

@@ -1,0 +1,18 @@
+﻿@model Models.Service
+@{
+}
+<div class="col-xl-4">
+    <div class="vs-service vs-box1 ">
+        <div class="service-img image-scale-hover">
+            <a href="/About"><img src="@Model.ImagePath" class="w-100" alt="Service Image"></a>
+        </div>
+        <div class="service-content">
+            <h3 class="service-title mb-10"><a href="/About">@Model.Name</a></h3>
+            <p class="service-text">
+                @Model.Description
+            </p>
+            <a href="/About" class="icon-btn vs-box-icon text-title"><i class="far fa-angle-right"></i></a>
+            <a href="/About" class="vs-btn learn-more mask-style1"><i class="far fa-angle-right"></i>Learn More</a>
+        </div>
+    </div>
+</div>

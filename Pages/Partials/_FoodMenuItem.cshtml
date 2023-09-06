@@ -1,0 +1,18 @@
+﻿@model Models.Food
+@{
+}
+
+<div class="col-sm-6 vs-food-box">
+<div class="media pt-40 align-items-stretch d-block d-lg-flex">
+    <div class="media-thumb">
+        <strong class="food-price text-theme bg-white text-md">$@Model.Price</strong>
+        <a href="/FoodDetails"><img src="@Model.SmallImagePath" alt="Food Menu Image"></a>
+    </div>
+    <div class="media-body px-lg-35 d-flex align-items-center">
+        <div class="food-content w-100">
+            <h3 class="food-title text-lg mb-0"><a href="/FoodDetails?foodName=@Model.Name">@Model.Name</a></h3>
+            <span class="food-rating-icon text-theme text-md"><i class="fas fa-star"></i></span>
+        </div>
+    </div>
+</div>
+</div>
